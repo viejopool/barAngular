@@ -1,0 +1,16 @@
+<form class="margin-footer" nz-form [nzLayout]="'inline'" [formGroup]="busquedaForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Escriba el nombre de la bebida">
+         <nz-input-group nzPrefixIcon="user">
+            <input nz-input list="tragos" formControlName="bebida" placeholder="Busque una bebida" (ngModelChange)="onChange($event)" [nzAutocomplete]="auto"/>
+            <nz-autocomplete [nzDataSource]="filteredOptions" #auto></nz-autocomplete>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control>
+        <button nz-button type="submit" nzType="primary" nzShape="circle" [disabled]="!busquedaForm.valid"><i nz-icon nzType="search"></i></button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+  <app-listabusqueda *ngIf='cargar'></app-listabusqueda>

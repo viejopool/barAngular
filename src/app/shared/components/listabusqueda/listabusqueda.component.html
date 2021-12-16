@@ -1,0 +1,19 @@
+<nz-list nzGrid>
+    <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+        <div *ngIf="listaBebidas===null; else elseBlock">
+       <p class="mensaje">No hay bebidas con esta letra</p> 
+    </div>
+      <ng-template #elseBlock>
+        <div  nz-col [nzXXl]="8" [nzXl]="4" [nzLg]="6" [nzMd]="6" [nzSm]="12" [nzXs]="24" *ngFor="let bebida of listaBebidas">
+          <nz-list-item>
+            <nz-card nzHoverable style="width:100%" [nzCover]="coverTemplate">
+              <nz-card-meta [nzTitle]="bebida?.strDrink" [nzDescription]="bebida?.idDrink"></nz-card-meta>
+            </nz-card>
+            <ng-template #coverTemplate>
+              <img [src]="bebida?.strDrinkThumb" />
+            </ng-template>
+          </nz-list-item>
+        </div>
+      </ng-template>
+    </div>
+  </nz-list>
