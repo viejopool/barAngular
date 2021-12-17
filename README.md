@@ -1,6 +1,6 @@
 # Bar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0. Este proyecto utiliza la API [https://www.thecocktaildb.com/](https://www.thecocktaildb.com/)
 
 ## Development server
 
