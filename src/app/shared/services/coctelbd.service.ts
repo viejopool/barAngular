@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, merge, Observable, zip } from 'rxjs';
+import { BehaviorSubject, merge, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { concat } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
